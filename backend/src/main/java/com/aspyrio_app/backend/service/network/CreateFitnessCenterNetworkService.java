@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class FitnessCenterNetworkService {
+public class CreateFitnessCenterNetworkService {
     private final FitnessCenterNetworkRepository fitnessCenterNetworkRepository;
     private final UserRepository userRepository;
 

@@ -1,4 +1,4 @@
-package com.aspyrio_app.backend.service.coach;
+package com.aspyrio_app.backend.service.fitnessCenterAdmin;
 
 import com.aspyrio_app.backend.dto.UserRegisterRequest;
 import com.aspyrio_app.backend.model.Role;
@@ -8,25 +8,26 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class CoachService {
+public class CreateFitnessAdminService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public User createCoach(UserRegisterRequest request) {
+    public User createFitnessAdmin(UserRegisterRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || !authentication.isAuthenticated()) {
             throw new RuntimeException("User is not authenticated");
         }
 
-        if (!authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_FITNESS_ADMIN"))) {
-            throw new RuntimeException("User does not have FITNESS_ADMIN role");
+        if (!authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_NETWORK_ADMIN"))) {
+            throw new RuntimeException("User does not have NETWORK_ADMIN role");
         }
 
         if (userRepository.findByUsername(request.getUsername()).isPresent()) {
@@ -41,12 +42,12 @@ public class CoachService {
         System.out.println("tempPassword: " + tempPassword);
         String encodedPassword = passwordEncoder.encode(tempPassword);
 
-        User coach = new User();
-        coach.setUsername(request.getUsername());
-        coach.setEmail(request.getEmail());
-        coach.setPassword(encodedPassword);
-        coach.setRole(Role.COACH);
+        User fitnessAdmin = new User();
+        fitnessAdmin.setUsername(request.getUsername());
+        fitnessAdmin.setEmail(request.getEmail());
+        fitnessAdmin.setPassword(encodedPassword);
+        fitnessAdmin.setRole(Role.FITNESS_ADMIN);
 
-        return userRepository.save(coach);
+        return userRepository.save(fitnessAdmin);
     }
 }
