@@ -1,4 +1,4 @@
-package com.aspyrio_app.backend.service;
+package com.aspyrio_app.backend.service.auth;
 
 import com.aspyrio_app.backend.model.User;
 import io.jsonwebtoken.Jwts;
@@ -28,7 +28,7 @@ public class JwtService {
             String privateKeyPEM = new String(privateIS.readAllBytes())
                     .replaceAll("-----BEGIN (.*)-----", "")
                     .replaceAll("-----END (.*)-----", "")
-                    .replaceAll("[^A-Za-z0-9+/=]", ""); // залишаємо тільки Base64 символи
+                    .replaceAll("[^A-Za-z0-9+/=]", "");
 
             byte[] decodedPrivate = Base64.getDecoder().decode(privateKeyPEM);
             PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(decodedPrivate);
@@ -40,7 +40,7 @@ public class JwtService {
             String publicKeyPEM = new String(publicIS.readAllBytes())
                     .replaceAll("-----BEGIN (.*)-----", "")
                     .replaceAll("-----END (.*)-----", "")
-                    .replaceAll("[^A-Za-z0-9+/=]", ""); // залишаємо тільки Base64 символи
+                    .replaceAll("[^A-Za-z0-9+/=]", "");
 
             byte[] decodedPublic = Base64.getDecoder().decode(publicKeyPEM);
             X509EncodedKeySpec pubSpec = new X509EncodedKeySpec(decodedPublic);

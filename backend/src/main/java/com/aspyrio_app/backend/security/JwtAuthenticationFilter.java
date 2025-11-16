@@ -1,7 +1,7 @@
 package com.aspyrio_app.backend.security;
 
 import com.aspyrio_app.backend.repository.UserRepository;
-import com.aspyrio_app.backend.service.JwtService;
+import com.aspyrio_app.backend.service.auth.JwtService;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

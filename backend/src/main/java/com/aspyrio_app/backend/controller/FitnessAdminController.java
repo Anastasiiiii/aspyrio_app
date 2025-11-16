@@ -1,0 +1,23 @@
+package com.aspyrio_app.backend.controller;
+
+import com.aspyrio_app.backend.dto.UserRegisterRequest;
+import com.aspyrio_app.backend.model.User;
+import com.aspyrio_app.backend.service.fitnessCenterAdmin.FitnessAdminService;
+import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/api/auth")
+public class FitnessAdminController {
+    private final FitnessAdminService fitnessAdminService;
+
+    @PostMapping("/register-fitness-admin")
+    public ResponseEntity<User> registerFitnessAdmin(@RequestBody UserRegisterRequest request) {
+        return ResponseEntity.ok(fitnessAdminService.createFitnessAdmin(request));
+    }
+}
