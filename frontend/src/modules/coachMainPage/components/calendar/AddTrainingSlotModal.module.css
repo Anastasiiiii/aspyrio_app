@@ -1,0 +1,160 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal {
+    background: var(--color-bg-dark);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-dark);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.modalTitle {
+    font-size: 24px;
+    margin: 0;
+    color: var(--color-text-white);
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: var(--color-text-white);
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+    background: var(--color-bg-dark);
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: var(--color-text-white);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timeRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.error {
+    color: var(--color-error);
+    font-size: 14px;
+    display: block;
+    min-height: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 12px 24px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background: var(--color-primary-hover);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttonSecondary {
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--color-text-white);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.buttonSecondary:hover {
+    background: var(--color-bg-dark);
+    border-color: var(--color-primary);
+}
+
+.buttonSecondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .timeRow {
+        grid-template-columns: 1fr;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+    }
+
+    .button,
+    .buttonSecondary {
+        width: 100%;
+    }
+}
+
+

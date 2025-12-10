@@ -1,0 +1,124 @@
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--color-text-white);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--color-text-white);
+    opacity: 0.7;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.form {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.inputWrapper {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    color: var(--color-text-white);
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 8px;
+    color: var(--color-text-white);
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.textarea::placeholder {
+    color: var(--color-text-white);
+    opacity: 0.5;
+}
+
+.error {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.success {
+    color: #4caf50;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 6px;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.tableSection {
+    margin-top: 40px;
+}
+
+.tableTitle {
+    color: var(--color-text-white);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.loading {
+    color: var(--color-text-white);
+    opacity: 0.7;
+    text-align: center;
+    padding: 20px;
+}
+
+

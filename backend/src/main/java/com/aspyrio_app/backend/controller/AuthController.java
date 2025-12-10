@@ -22,6 +22,11 @@ public class AuthController {
         return ResponseEntity.ok(authService.registerNetworkAdmin(request));
     }
 
+    @PostMapping("/register-network-admin")
+    public ResponseEntity<AuthResponse> registerNetworkAdmin(@RequestBody RegisterRequest request) {
+        return ResponseEntity.ok(authService.registerNetworkAdmin(request));
+    }
+
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
         return ResponseEntity.ok(authService.login(request));

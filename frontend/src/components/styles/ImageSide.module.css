@@ -1,0 +1,30 @@
+.container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex: none;
+        height: 300px;
+        width: 100%;
+    }
+
+    .image {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 250px;
+    }
+}
+

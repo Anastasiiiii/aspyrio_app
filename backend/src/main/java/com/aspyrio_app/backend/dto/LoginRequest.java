@@ -1,5 +1,4 @@
 package com.aspyrio_app.backend.dto;
-
 import lombok.*;
 
 @NoArgsConstructor

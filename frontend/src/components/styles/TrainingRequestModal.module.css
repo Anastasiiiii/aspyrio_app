@@ -1,0 +1,159 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    background: var(--color-bg-dark);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--color-border-dark);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+    outline: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.header h2 {
+    color: var(--color-text-white);
+    margin: 0;
+    font-size: 20px;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    color: var(--color-text-white);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+    padding: 20px;
+}
+
+.infoSection {
+    margin-bottom: 20px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.infoRow:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: var(--color-text-white);
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.value {
+    color: var(--color-text-white);
+    font-weight: 600;
+}
+
+.error {
+    color: #ff4444;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 6px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.rejectButton,
+.approveButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rejectButton {
+    background: #ff4444;
+    color: var(--color-text-white);
+}
+
+.rejectButton:hover:not(:disabled) {
+    background: #cc3333;
+}
+
+.approveButton {
+    background: var(--color-primary);
+    color: var(--color-text-white);
+}
+
+.approveButton:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+}
+
+.rejectButton:disabled,
+.approveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+

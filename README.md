@@ -1,1 +1,0 @@
-# aspyrio_app

@@ -1,0 +1,33 @@
+.label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-white);
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .label {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .checkbox {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .label {
+        font-size: 13px;
+    }
+}
+

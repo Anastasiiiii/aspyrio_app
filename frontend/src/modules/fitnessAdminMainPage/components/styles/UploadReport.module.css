@@ -1,0 +1,227 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: var(--color-text-white);
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--color-text-white);
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    color: var(--color-text-white);
+}
+
+.uploadSection {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: var(--color-bg-dark);
+    border-radius: 12px;
+    border: 1px solid var(--color-border-dark);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fileInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fileInputLabel {
+    display: inline-block;
+    padding: 14px 24px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.fileInputLabel:hover {
+    background: var(--color-primary-hover);
+}
+
+.fileInputLabel:active {
+    background: var(--color-primary-active);
+}
+
+.fileInput {
+    display: none;
+}
+
+.submitButton {
+    padding: 14px 28px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+    background: var(--color-primary-hover);
+}
+
+.submitButton:active {
+    background: var(--color-primary-active);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error {
+    padding: 15px;
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid var(--color-error);
+    border-radius: 8px;
+    color: var(--color-error);
+    text-align: center;
+}
+
+.success {
+    padding: 15px;
+    background: rgba(7, 214, 182, 0.1);
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.reportsSection {
+    padding: 30px;
+    background: var(--color-bg-dark);
+    border-radius: 12px;
+    border: 1px solid var(--color-border-dark);
+}
+
+.sectionTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--color-text-white);
+}
+
+.loading,
+.empty {
+    padding: 40px;
+    text-align: center;
+    color: var(--color-text-white);
+    opacity: 0.7;
+}
+
+.reportsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reportItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-dark);
+    transition: all 0.2s ease;
+}
+
+.reportItem:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+}
+
+.reportInfo {
+    flex: 1;
+}
+
+.reportName {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-white);
+    margin-bottom: 8px;
+}
+
+.reportDate {
+    font-size: 14px;
+    color: var(--color-text-white);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.downloadButton {
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.downloadButton:hover {
+    background: var(--color-primary-hover);
+}
+
+.downloadButton:active {
+    background: var(--color-primary-active);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 70px 15px 20px 15px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .uploadSection,
+    .reportsSection {
+        padding: 20px;
+    }
+
+    .reportItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .downloadButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 70px 10px 15px 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+

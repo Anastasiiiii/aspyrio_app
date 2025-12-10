@@ -1,0 +1,53 @@
+.calendar {
+    padding: 20px;
+    background: var(--color-bg-dark);
+    color: var(--color-text-white);
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.title {
+    color: var(--color-text-white);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.navButton {
+    padding: 8px 16px;
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.navButton:hover {
+    background: var(--color-primary-hover);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    color: var(--color-text-white);
+    font-size: 18px;
+}
+
+

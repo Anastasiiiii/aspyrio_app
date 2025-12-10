@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: var(--color-bg-black);
+    position: relative;
+}
+
+.mainContent {
+    flex: 1;
+    margin-left: 0;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+    .mainContent {
+        margin-left: 280px;
+    }
+
+    .mainContent.sidebarOpen {
+        margin-left: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        margin-left: 0;
+        padding: 15px;
+        padding-top: 70px;
+    }
+
+    .mainContent.sidebarOpen {
+        margin-left: 0;
+    }
+}

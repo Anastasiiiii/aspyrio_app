@@ -1,0 +1,75 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border-dark);
+}
+
+.select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: var(--color-bg-dark) !important;
+    background-color: var(--color-bg-dark) !important;
+    color: var(--color-text-white) !important;
+    font-size: 15px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.wrapper:focus-within {
+    padding: 1px;
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.wrapper:focus-within .select {
+    background: var(--color-bg-dark);
+    border: none;
+}
+
+.wrapper:hover {
+    padding: 1px;
+    background: var(--gradient-primary);
+    border: none;
+}
+
+.wrapper:hover .select {
+    background: var(--color-bg-dark);
+    border: none;
+}
+
+.select option {
+    background: var(--color-bg-dark);
+    color: var(--color-text-white);
+    padding: 10px;
+}
+
+.select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .select {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .select {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+

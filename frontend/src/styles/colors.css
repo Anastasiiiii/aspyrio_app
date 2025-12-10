@@ -1,0 +1,26 @@
+:root {
+    /* Primary Colors */
+    --color-primary: #005C53;
+    --color-primary-hover: #007066;
+    --color-primary-active: #004a42;
+    
+    /* Accent Colors */
+    --color-accent: #07D6B6;
+    
+    /* Background Colors */
+    --color-bg-black: #000;
+    --color-bg-dark: #111;
+    
+    /* Text Colors */
+    --color-text-white: #fff;
+    --color-text-placeholder: #666;
+    
+    /* Border Colors */
+    --color-border-dark: #333;
+    
+    /* Error Colors */
+    --color-error: #ff4444;
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(90deg, #014034, #718C37, #CBD962, #D5D977);
+}

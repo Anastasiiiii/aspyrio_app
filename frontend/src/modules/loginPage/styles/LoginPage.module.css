@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background: var(--color-bg-black);
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
