@@ -14,8 +14,8 @@ public class CreateIndividualTrainingRequestRequest {
     private Long sportId;
     private LocalDateTime requestedStartTime;
     private LocalDateTime requestedEndTime;
-    private String trainingType; // ONLINE, OFFLINE, BOTH_ONLINE_OFFLINE
-    private String message; // Optional message
+    private String trainingType;
+    private String message;
 }
 
 

@@ -18,7 +18,7 @@ import java.util.Map;
 public class FitnessCenterNetworkController {
     private final CreateFitnessCenterNetworkService fitnessCenterNetworkService;
 
-    @PostMapping("/api/auth/register-fitness-network")
+    @PostMapping("/api/network/register-fitness-network")
     public ResponseEntity<FitnessCenterNetwork> registerFitnessNetwork(@RequestBody FitnessCenterNetworkRegisterRequest request) {
         return ResponseEntity.ok(fitnessCenterNetworkService.createNetwork(request));
     }

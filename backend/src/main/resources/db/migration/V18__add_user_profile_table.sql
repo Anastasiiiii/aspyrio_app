@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS user_profile (
 );
 
 ALTER TABLE user_profile
-    ADD CONSTRAINT IF NOT EXISTS fk_user_profile_user
+    ADD CONSTRAINT fk_user_profile_user
         FOREIGN KEY (user_id)
             REFERENCES users(id)
             ON DELETE CASCADE;

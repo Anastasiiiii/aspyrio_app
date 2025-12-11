@@ -27,7 +27,7 @@ export const createNetwork = async (data) => {
     throw new Error('No authentication token found');
   }
   
-  const response = await api.post('/auth/register-fitness-network', data, {
+  const response = await api.post('/network/register-fitness-network', data, {
     headers: {
       'Authorization': `Bearer ${token}`
     }
